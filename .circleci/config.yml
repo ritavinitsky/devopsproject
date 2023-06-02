@@ -15,8 +15,9 @@ jobs:
     executor: my-exe
     steps:
       - checkout
+      - run: npm install
       - run: npm rebuild
-      -run: npm test
+      - run: npm test
 
 workflows:
     my-workflow:
